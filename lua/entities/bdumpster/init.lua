@@ -133,7 +133,7 @@ function ENT:Use(ply)
     -- Send the cooldown to the client.
     net.Start("bdumpster_opened")
         net.WriteUInt(self.cooldown, 32)
-        net.WriteUInt(self:EntIndex(), 10)
+        net.WriteUInt(self:EntIndex(), 16)
     net.Broadcast(ply)
 
     -- Give the player their loot! Maybe :)
