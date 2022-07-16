@@ -1,7 +1,7 @@
 net.Receive("bdumpster_send_info", function()
 	local cooldown = net.ReadUInt(32)
 	
-	local index = net.ReadUInt(10)
+	local index = net.ReadUInt(16)
 	local ent = Entity(index)
 
 	if not IsValid(ent) or ent:GetClass() != "bdumpster" then return end 
@@ -14,7 +14,7 @@ end)
 net.Receive("bdumpster_opened", function()
 	local cooldown = net.ReadUInt(32)
 	
-	local index = net.ReadUInt(10)
+	local index = net.ReadUInt(16)
 	local ent = Entity(index)
 
 	if not IsValid(ent) or ent:GetClass() != "bdumpster" then return end 
