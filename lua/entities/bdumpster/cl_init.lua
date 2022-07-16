@@ -21,7 +21,7 @@ function ENT:Draw()
 	if not self.requestedInfo then 
 		self.requestedInfo = true 
 		net.Start("bdumpster_request_info")
-			net.WriteUInt(self:EntIndex(), 10)
+			net.WriteUInt(self:EntIndex(), 16)
 		net.SendToServer()
 	end
 
