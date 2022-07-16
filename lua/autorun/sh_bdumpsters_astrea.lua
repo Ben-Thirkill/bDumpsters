@@ -2,7 +2,7 @@
 
 
 -- This is the main hook everything is loaded in. This runs before we load the modules, which is the perfect time for you to add your own.
-hook.Add("AstreaToolboxLoadModules", "bdumpsters_astrea_load", function()
+hook.Add("AstreaLoadThirdParty", "bdumpsters_astrea_load", function()
 	
 	-- We just print to console that we're adding the module. 
 	bDumpsters.Print("Astrea Exists - Enabling Module")
